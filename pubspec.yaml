@@ -1,7 +1,8 @@
 name: checkbox_formfield
 description: A few kinds of checkbox that can be used as FormField
-version: 0.0.1
+version: 0.1.0
 homepage: https://reidha.github.io/
+repository: https://github.com/reidha/checkbox_formfield
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
