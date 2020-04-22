@@ -1,3 +1,8 @@
+## [0.1.0+3] - April 22, 2020
+
+* Update description
+* Fix typo: checkbox_list tile_formfield.dart --> checkbox_list_tile_formfield.dart
+
 ## [0.1.0+2] - April 22, 2020
 
 * Update description
