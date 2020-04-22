@@ -1,3 +1,7 @@
+## [0.1.0+2] - April 22, 2020
+
+* Update description
+
 ## [0.1.0+1] - April 12, 2020
 
 * Add example directory

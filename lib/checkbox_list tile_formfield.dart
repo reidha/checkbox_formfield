@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Use CheckboxListTile as part of Form
 class CheckboxListTileFormField extends FormField<bool> {
   CheckboxListTileFormField({
     Key key,

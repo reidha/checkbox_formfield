@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Use Icon as checkbox
 class CheckboxIconFormField extends FormField<bool> {
   CheckboxIconFormField({
     Key key,
