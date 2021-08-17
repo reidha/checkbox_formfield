@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 /// Use CheckboxListTile as part of Form
 class CheckboxListTileFormField extends FormField<bool> {
   CheckboxListTileFormField({
-    Key key,
-    Widget title,
-    BuildContext context,
-    FormFieldSetter<bool> onSaved,
-    FormFieldValidator<bool> validator,
+    Key? key,
+    Widget? title,
+    BuildContext? context,
+    FormFieldSetter<bool>? onSaved,
+    FormFieldValidator<bool>? validator,
     bool initialValue = false,
     bool autovalidate = false,
     bool enabled = true,
     bool dense = false,
-    Color errorColor,
-    Color activeColor,
-    Color checkColor,
+    Color? errorColor,
+    Color? activeColor,
+    Color? checkColor,
     ListTileControlAffinity controlAffinity = ListTileControlAffinity.leading,
-    Widget secondary,
+    Widget? secondary,
   }) : super(
           key: key,
           onSaved: onSaved,
@@ -36,7 +36,7 @@ class CheckboxListTileFormField extends FormField<bool> {
               onChanged: enabled ? state.didChange : null,
               subtitle: state.hasError
                   ? Text(
-                      state.errorText,
+                      state.errorText!,
                       style: TextStyle(color: errorColor),
                     )
                   : null,

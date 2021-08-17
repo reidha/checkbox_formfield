@@ -42,11 +42,11 @@ Widget createScaffold() {
               children: <Widget>[
                 CheckboxListTileFormField(
                   title: Text('Check!'),
-                  onSaved: (bool value) {
+                  onSaved: (bool? value) {
                     print(value);
                   },
-                  validator: (bool value) {
-                    if (value) {
+                  validator: (bool? value) {
+                    if (value!) {
                       return null;
                     } else {
                       return 'False!';
@@ -57,12 +57,12 @@ Widget createScaffold() {
                   initialValue: true,
                   enabled: false,
                   iconSize: 32,
-                  onSaved: (bool value) {},
+                  onSaved: (bool? value) {},
                 ),
                 RaisedButton(
                   onPressed: () {
-                    if (_formKey.currentState.validate()) {
-                      _formKey.currentState.save();
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
                     }
                   },
                   child: Text('New'),
