@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 /// Use Icon as checkbox
 class CheckboxIconFormField extends FormField<bool> {
   CheckboxIconFormField({
-    Key key,
-    BuildContext context,
-    FormFieldSetter<bool> onSaved,
+    Key? key,
+    BuildContext? context,
+    FormFieldSetter<bool>? onSaved,
     bool initialValue = false,
     bool autovalidate = false,
     bool enabled = true,
     IconData trueIcon = Icons.check,
     IconData falseIcon = Icons.check_box_outline_blank,
-    Color trueIconColor,
-    Color falseIconColor,
-    Color disabledColor,
+    Color? trueIconColor,
+    Color? falseIconColor,
+    Color? disabledColor,
     double padding = 24.0,
-    double iconSize,
+    double? iconSize,
   }) : super(
           key: key,
           onSaved: onSaved,
@@ -28,7 +28,7 @@ class CheckboxIconFormField extends FormField<bool> {
 
             return Padding(
                 padding: EdgeInsets.all(padding),
-                child: state.value
+                child: state.value!
                     ? _createTappableIcon(state, enabled, trueIcon,
                         trueIconColor, disabledColor, iconSize)
                     : _createTappableIcon(state, enabled, falseIcon,
@@ -37,11 +37,11 @@ class CheckboxIconFormField extends FormField<bool> {
         );
 
   static Widget _createTappableIcon(FormFieldState<bool> state, bool enabled,
-      IconData icon, Color iconColor, Color disabledColor, double iconSize) {
+      IconData icon, Color? iconColor, Color? disabledColor, double? iconSize) {
     return IconButton(
       onPressed: enabled
           ? () {
-              state.didChange(!state.value);
+              state.didChange(!state.value!);
             }
           : null,
       icon: Icon(icon,
