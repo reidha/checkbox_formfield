@@ -52,14 +52,28 @@ Widget createScaffold() {
                       return 'False!';
                     }
                   },
+                  onChanged: (value) {
+                    if (value) {
+                      print("ListTile Checked :)");
+                    } else {
+                      print("ListTile Not Checked :(");
+                    }
+                  },
                 ),
                 CheckboxIconFormField(
                   initialValue: true,
                   enabled: false,
                   iconSize: 32,
                   onSaved: (bool? value) {},
+                  onChanged: (value) {
+                    if (value) {
+                      print("Icon Checked :)");
+                    } else {
+                      print("Icon Not Checked :(");
+                    }
+                  },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();

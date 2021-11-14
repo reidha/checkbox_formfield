@@ -9,6 +9,7 @@ class CheckboxListTileFormField extends FormField<bool> {
     FormFieldSetter<bool>? onSaved,
     FormFieldValidator<bool>? validator,
     bool initialValue = false,
+    ValueChanged<bool>? onChanged,
     AutovalidateMode autovalidateMode,
     bool enabled = true,
     bool dense = false,
@@ -33,7 +34,12 @@ class CheckboxListTileFormField extends FormField<bool> {
               activeColor: activeColor,
               checkColor: checkColor,
               value: state.value,
-              onChanged: enabled ? state.didChange : null,
+              onChanged: enabled
+                  ? (value) {
+                      state.didChange(value);
+                      if (onChanged != null) onChanged(value!);
+                    }
+                  : null,
               subtitle: state.hasError
                   ? Text(
                       state.errorText!,
