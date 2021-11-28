@@ -8,7 +8,7 @@ class CheckboxIconFormField extends FormField<bool> {
     FormFieldSetter<bool>? onSaved,
     bool initialValue = false,
     ValueChanged<bool>? onChanged,
-    AutovalidateMode autovalidateMode,
+    AutovalidateMode? autovalidateMode,
     bool enabled = true,
     IconData trueIcon = Icons.check,
     IconData falseIcon = Icons.check_box_outline_blank,

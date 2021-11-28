@@ -10,7 +10,7 @@ class CheckboxListTileFormField extends FormField<bool> {
     FormFieldValidator<bool>? validator,
     bool initialValue = false,
     ValueChanged<bool>? onChanged,
-    AutovalidateMode autovalidateMode,
+    AutovalidateMode? autovalidateMode,
     bool enabled = true,
     bool dense = false,
     Color? errorColor,
