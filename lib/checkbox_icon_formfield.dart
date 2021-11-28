@@ -7,6 +7,7 @@ class CheckboxIconFormField extends FormField<bool> {
     BuildContext? context,
     FormFieldSetter<bool>? onSaved,
     bool initialValue = false,
+    ValueChanged<bool>? onChanged,
     AutovalidateMode? autovalidateMode,
     bool enabled = true,
     IconData trueIcon = Icons.check,
@@ -29,19 +30,27 @@ class CheckboxIconFormField extends FormField<bool> {
             return Padding(
                 padding: EdgeInsets.all(padding),
                 child: state.value!
-                    ? _createTappableIcon(state, enabled, trueIcon,
+                    ? _createTappableIcon(state, enabled, trueIcon, onChanged,
                         trueIconColor, disabledColor, iconSize)
-                    : _createTappableIcon(state, enabled, falseIcon,
+                    : _createTappableIcon(state, enabled, falseIcon, onChanged,
                         falseIconColor, disabledColor, iconSize));
           },
         );
 
-  static Widget _createTappableIcon(FormFieldState<bool> state, bool enabled,
-      IconData icon, Color? iconColor, Color? disabledColor, double? iconSize) {
+  static Widget _createTappableIcon(
+    FormFieldState<bool> state,
+    bool enabled,
+    IconData icon,
+    ValueChanged<bool>? onChanged,
+    Color? iconColor,
+    Color? disabledColor,
+    double? iconSize,
+  ) {
     return IconButton(
       onPressed: enabled
           ? () {
               state.didChange(!state.value!);
+              if (onChanged != null) onChanged(state.value!);
             }
           : null,
       icon: Icon(icon,
