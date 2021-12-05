@@ -1,7 +1,6 @@
 ## [0.1.1] - December 5, 2021
 
-* Update for new versions
-
+* Update for new versions: null safety, onChanged, autovalidateMode
 
 ## [0.1.0+3] - April 22, 2020
 
