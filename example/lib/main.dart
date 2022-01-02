@@ -58,6 +58,7 @@ Widget createScaffold(BuildContext? context) {
                     }
                   },
                   autovalidateMode: AutovalidateMode.always,
+                  contentPadding: EdgeInsets.all(1),
                 ),
                 CheckboxIconFormField(
                   context: context,
