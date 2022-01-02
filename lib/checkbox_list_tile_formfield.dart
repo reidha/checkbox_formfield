@@ -17,6 +17,8 @@ class CheckboxListTileFormField extends FormField<bool> {
     Color? activeColor,
     Color? checkColor,
     ListTileControlAffinity controlAffinity = ListTileControlAffinity.leading,
+    EdgeInsetsGeometry? contentPadding,
+    bool autofocus = false,
     Widget? secondary,
   }) : super(
           key: key,
@@ -48,6 +50,8 @@ class CheckboxListTileFormField extends FormField<bool> {
                   : null,
               controlAffinity: controlAffinity,
               secondary: secondary,
+              contentPadding: contentPadding,
+              autofocus: autofocus,
             );
           },
         );

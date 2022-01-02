@@ -1,3 +1,8 @@
+## [0.2.0] - January 2, 2022 - BREAKING CHANGE!
+
+* [CheckboxIconFormfield] Replace `accentIconTheme.color` with `colorScheme.secondary` as `accentIconTheme.color` is deprecated
+* [CheckboxListTileFormfield] Add `contentPadding` and `autofocus`
+
 ## [0.1.2] - January 2, 2022
 
 * Update library versions, the sample and README.md

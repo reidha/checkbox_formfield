@@ -17,61 +17,7 @@ This library currently has two Widgets.
 
 ## Usage sample
 
-Please check `example` in this library for the latest version.  
-
-```
-class TaskEditPage extends StatelessWidget {
-  final _formKey = GlobalKey<FormState>();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Sample',
-        ),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          children: <Widget>[
-            Form(
-              key: _formKey,
-              child: Column(
-                children: <Widget>[
-                  CheckboxListTileFormField(
-                    title: Text('Check!'),
-                    onSaved: (bool value) {},
-                    validator: (bool value) {
-                      if (value) {
-                        return null;
-                      } else {
-                        return 'False!';
-                      }
-                    },
-                  ),
-                  CheckboxIconFormField(
-                    iconSize: 32,
-                    onSaved: (bool value) {},
-                  ),
-                  RaisedButton(
-                    onPressed: () {
-                      if (_formKey.currentState.validate()) {
-                        _formKey.currentState.save();
-                      }
-                    },
-                    child: Text('Submit'),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
+Please check [example/lib](https://github.com/reidha/checkbox_formfield/tree/master/example/lib) in this library.  
 
 ## Specifications
 
@@ -85,7 +31,7 @@ class TaskEditPage extends StatelessWidget {
 |onSaved|[FormField.onSaved](https://api.flutter.dev/flutter/widgets/FormField/onSaved.html)|
 |validator|[FormField.validator](https://api.flutter.dev/flutter/widgets/FormField/validator.html)|
 |initialValue|[FormField.initialValue](https://api.flutter.dev/flutter/widgets/FormField/initialValue.html)|
-|autovalidate|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
+|autovalidateMode|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
 |enabled|Whether the checkbox is enabled|
 |dense|[CheckboxListTile.dense](https://api.flutter.dev/flutter/material/CheckboxListTile/dense.html)|
 |errorColor|Color of error message<br> Default: `Theme.errorColor` (`context` is given), `Colors.red` (otherwise)|
@@ -93,6 +39,8 @@ class TaskEditPage extends StatelessWidget {
 |checkColor|[CheckboxListTile.checkColor](https://api.flutter.dev/flutter/material/CheckboxListTile/checkColor.html)|
 |controlAffinity|[CheckboxListTile.controlAffinity](https://api.flutter.dev/flutter/material/CheckboxListTile/controlAffinity.html)|
 |secondary|[CheckboxListTile.secondary](https://api.flutter.dev/flutter/material/CheckboxListTile/secondary.html)|
+|contentPadding|[CheckboxListTile.contentPadding](https://api.flutter.dev/flutter/material/CheckboxListTile/contentPadding.html)|
+|autofocus|[CheckboxListTile.autofocus](https://api.flutter.dev/flutter/material/CheckboxListTile/autofocus.html)|
 
 ### CheckboxIconFormField
 
@@ -102,11 +50,11 @@ class TaskEditPage extends StatelessWidget {
 |context|Provide a default color to `errorColor`|
 |onSaved|[FormField.onSaved](https://api.flutter.dev/flutter/widgets/FormField/onSaved.html)|
 |initialValue|[FormField.initialValue](https://api.flutter.dev/flutter/widgets/FormField/initialValue.html)|
-|autovalidate|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
+|autovalidateMode|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
 |enabled|Whether the checkbox is enabled|
 |trueIcon|`IconData` if true <br> Default: `Icons.check`|
 |falseIcon|`IconData` if false <br> Default: `Icons.check_box_outline_blank`|
-|trueIconColor|`Color` if true <br> Default: `Theme.accentIconTheme.color` (if `context` is given), `Theme.iconTheme.color` (otherwise)|
+|trueIconColor|`Color` if true <br> Default: `Theme.colorScheme.secondary` (if `context` is given), `Theme.iconTheme.color` (otherwise)|
 |falseIconColor|`Color` if false <br> Default: `Theme.iconTheme.color`|
 |disabledColor|`Color` if disabled <br> Default: `Theme.disabledColor`|
 |padding|`padding`<br> Default: 24.0|
