@@ -17,6 +17,8 @@ This library currently has two Widgets.
 
 ## Usage sample
 
+Please check `example` in this library for the latest version.  
+
 ```
 class TaskEditPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -83,7 +85,7 @@ class TaskEditPage extends StatelessWidget {
 |onSaved|[FormField.onSaved](https://api.flutter.dev/flutter/widgets/FormField/onSaved.html)|
 |validator|[FormField.validator](https://api.flutter.dev/flutter/widgets/FormField/validator.html)|
 |initialValue|[FormField.initialValue](https://api.flutter.dev/flutter/widgets/FormField/initialValue.html)|
-|autovalidate|[FormField.autovalidate](https://api.flutter.dev/flutter/widgets/FormField/autovalidate.html)|
+|autovalidate|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
 |enabled|Whether the checkbox is enabled|
 |dense|[CheckboxListTile.dense](https://api.flutter.dev/flutter/material/CheckboxListTile/dense.html)|
 |errorColor|Color of error message<br> Default: `Theme.errorColor` (`context` is given), `Colors.red` (otherwise)|
@@ -100,7 +102,7 @@ class TaskEditPage extends StatelessWidget {
 |context|Provide a default color to `errorColor`|
 |onSaved|[FormField.onSaved](https://api.flutter.dev/flutter/widgets/FormField/onSaved.html)|
 |initialValue|[FormField.initialValue](https://api.flutter.dev/flutter/widgets/FormField/initialValue.html)|
-|autovalidate|[FormField.autovalidate](https://api.flutter.dev/flutter/widgets/FormField/autovalidate.html)|
+|autovalidate|[FormField.autovalidateMode](https://api.flutter.dev/flutter/widgets/FormField/autovalidateMode.html)|
 |enabled|Whether the checkbox is enabled|
 |trueIcon|`IconData` if true <br> Default: `Icons.check`|
 |falseIcon|`IconData` if false <br> Default: `Icons.check_box_outline_blank`|

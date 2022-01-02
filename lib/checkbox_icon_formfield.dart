@@ -26,6 +26,7 @@ class CheckboxIconFormField extends FormField<bool> {
             trueIconColor ??= (context == null
                 ? null
                 : Theme.of(context).accentIconTheme.color);
+            // Plan to change to colorScheme.secondary
 
             return Padding(
                 padding: EdgeInsets.all(padding),

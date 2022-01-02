@@ -10,22 +10,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Simple Lightweight Todo',
+      title: 'Sample',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        accentColor: Colors.blue,
         disabledColor: Colors.purple,
-        accentIconTheme: IconThemeData(
-          color: Colors.blue,
-        ),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo)
+            .copyWith(secondary: Colors.blue),
       ),
-      home: createScaffold(),
+      home: createScaffold(context),
     );
   }
 }
 
-Widget createScaffold() {
+Widget createScaffold(BuildContext? context) {
   final _formKey = GlobalKey<FormState>();
+  bool? checkboxIconFormFieldValue = false;
   return Scaffold(
     appBar: AppBar(
       title: Text(
@@ -59,12 +57,16 @@ Widget createScaffold() {
                       print("ListTile Not Checked :(");
                     }
                   },
+                  autovalidateMode: AutovalidateMode.always,
                 ),
                 CheckboxIconFormField(
-                  initialValue: true,
-                  enabled: false,
+                  context: context,
+                  initialValue: checkboxIconFormFieldValue,
+                  enabled: true,
                   iconSize: 32,
-                  onSaved: (bool? value) {},
+                  onSaved: (bool? value) {
+                    checkboxIconFormFieldValue = value;
+                  },
                   onChanged: (value) {
                     if (value) {
                       print("Icon Checked :)");
