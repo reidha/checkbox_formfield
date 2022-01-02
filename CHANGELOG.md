@@ -1,3 +1,7 @@
+## [0.1.2] - January 2, 2022
+
+* Update library versions, the sample and README.md
+
 ## [0.1.1] - December 5, 2021
 
 * Update for new versions: null safety, onChanged, autovalidateMode
